@@ -52,14 +52,31 @@
 </div>
 
 </div><hr />
-<div id="footer">
+<div id="footer">{% block footer%}
 <br />
 <h2>哈雷彗星项目组：最佳五人组</h2>
-<h3>Halley's Comet Project Develop Team : TopFive</h3>
+<h3>Halley's Comet Project Develop Team : TopFive</h3>{% endblock%}
+
 </div>
+{% block ex%}{% endblock %}
 <script type="text/javascript" src="/static/ZeroClipboard.js"></script>
 <script type="text/javascript" src="/static/jquery.min.js"></script>
 <script type="text/javascript" src="/static/jzclip.js"></script>
+<script language="javascript">
+$(document).ready(function(){
+	//	$("#J_copy_clipboard_data").css("display","none");
+	//	$("#J_copy_clipboard_data").hide();
+	//	$("#searchbtn").click(function(){
+	//		$("#J_copy_clipboard_data").css("display","block");
+	if($("#js_get_short_url").html()==""){
+		$("#J_copy_clipboard_data").hide();
+	}
+	else{
+		$("#J_copy_clipboard_data").show();
+	}
+		//	});
+	});
+</script>
 {% endblock %}
 </body>
 </html>
