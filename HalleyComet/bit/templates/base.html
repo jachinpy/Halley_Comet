@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <title> {% block title %} Halley Comet {% endblock %}</title>
+<link href="/static/hc_share.css" rel="stylesheet" type="text/css"> 
 <style>
 @import url('/static/reset.css');
 </style>
@@ -24,7 +25,7 @@
 	<div style="margin-left:140px;" >
 	<br />
 	<h2>哈雷彗星项目组：最佳五人组</h2>
-	<h3>Halley's Comet Project Develop Team : TopFive</h3>
+	<h5>Halley's Comet Project Develop Team : TopFive</h5>
 	</div>
 	{% endblock %}
 {% endblock %}	
@@ -40,7 +41,7 @@
 </div>
 
 <div id="returninfo">{% block returninfo%}
-<h3>缩短以后的域名：</h3><br />
+<h2>缩短以后的域名：</h2><br />
 
 <div id="nowinfo"><a  id="js_get_short_url" href="{{long_url}}" >{{short_url}}</a></div>
 
@@ -48,14 +49,19 @@
 <input id="J_copy_clipboard_data" type="button" value="copy" />
 {% endblock %}
 </div>
-<div id="nowinfobtn"></div>
+<div id="nowinfobtn">
+</div>
 </div>
 
-</div><hr />
+	<div class="demo">
+		<a class="share" style=" width:100px; text-align:center; line-height:30px; height:30px; margin:10px auto;font-size:16px; display:block; text-decoration:none; padding:10px; border:1px dashed #cfcfcf;" href="javascript:void(0)">分享</a>
+
+	</div><hr />
+
 <div id="footer">{% block footer%}
 <br />
 <h2>哈雷彗星项目组：最佳五人组</h2>
-<h3>Halley's Comet Project Develop Team : TopFive</h3>{% endblock%}
+<h5>Halley's Comet Project Develop Team : TopFive</h5>{% endblock%}
 
 </div>
 {% block ex%}{% endblock %}
@@ -72,6 +78,7 @@ $(document).ready(function(){
 	}
 	});
 </script>
+<script type="text/javascript" src="/static/hc_share.js"></script>
 {% endblock %}
 </body>
 </html>
