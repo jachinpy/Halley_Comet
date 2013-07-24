@@ -6,7 +6,6 @@ import urlparse
 def long_to_short(long_url):
     short_url = ''
     urlparsed = urlparse.urlparse(long_url)
-    print urlparsed.scheme
     if urlparsed.scheme == '':
         long_url = 'http://' + long_url
     if long_url[-1] != "/":
