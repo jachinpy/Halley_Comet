@@ -53,7 +53,7 @@ def index(req):
                 username = req.user.username
                 user = User.objects.get(username=username)
                 user_data = user.url_set.all()
-                user_data.reverse()
+                user_data = user_data[::-1]
                 short_url_ = Url.objects.get(short_url=short_url)
                 user.url_set.add(short_url_)
             return render(req, 'index.html', {'lu': lu, 'user': req.user, 'short_url': short_url, 'long_url': long_url, 'user_data': user_data})
@@ -63,7 +63,7 @@ def index(req):
             username = req.user.username
             user = User.objects.get(username=username)
             user_data = user.url_set.all()
-            user_data.reverse()
+            user_data = user_data[::-1]
     return render(req, 'index.html', {'lu': lu, 'user': req.user, 'user_data': user_data})
 
 def turn(req, short_hash):
