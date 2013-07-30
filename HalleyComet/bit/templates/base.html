@@ -76,7 +76,7 @@
             <h3>历史记录:</h3> 
             {% for data in user_data %}
             <div class="span6">
-                {{data.long_url}}
+                {{data.long_url|truncatechars:50}}
             </div>
             <div class="span5">
                 www.HC.cn/{{data.short_url}}
