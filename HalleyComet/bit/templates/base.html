@@ -37,8 +37,12 @@
                          <a href="/userregist/">注册</a>
                     </li>
                     {% if user.username %}
-                    <li>{{user.username}}</li> 
-                        <li><a href="/userlogout/">logout</a></li>
+                    <li>
+                        {{user.username}}
+                    </li> 
+                    <li>
+                        <a href="/userlogout/">logout</a>
+                    </li>
                     {% else %}
                     <li>
                         <a href="/login/">登录</a>
