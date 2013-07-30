@@ -5,8 +5,7 @@
         <title>HalleyComet</title>
         {% endblock %}
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Bootstrap -->
-        <link href="/static/bootstrap/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="/static/bootstrap/bootstrap.min.css" rel="stylesheet" media="screen"><!--Bootstrap-->
         {% block style%}
         <style>
             body {
@@ -33,23 +32,23 @@
 
             <div class="masthead">
                 <ul class="nav nav-pills pull-right">
-                    <li class="active">
-                         <a href="/userregist/">注册</a>
-                    </li>
                     {% if user.username %}
                     <li>
-                        {{user.username}}
+                        <h5>欢迎您，亲爱的{{user.username}}</h5>
                     </li> 
                     <li>
                         <a href="/userlogout/">logout</a>
                     </li>
                     {% else %}
                     <li>
+                         <a href="/userregist/">注册</a>
+                    </li>
+                    <li>
                         <a href="/login/">登录</a>
                     </li>
                     {% endif %}
                 </ul>   
-                <img class="muted" src="/static/t.jpg" width="55px" height="50px"><a href="#">HalleyComet</a>  
+                <img class="muted" src="/static/t.jpg" width="55px" height="50px"><a>HalleyComet</a> 
             </div>
         <hr />
         {% endblock %}
