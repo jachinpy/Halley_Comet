@@ -11,7 +11,6 @@
             body {
                 padding-top: 20px;
                 padding-bottom:40px;
-                background: url(/static/bomo.jpg)
             }
             .container-narrow {
                 margin: 0 auto;
@@ -50,11 +49,10 @@
                         <a href="/login/">登录</a>
                     </li>
                     {% endif %}
-                </ul>   
-                <img class="muted" src="/static/t.jpg" width="55px" height="50px"><a>HalleyComet</a> 
+                </ul>  
+                <img class="muted" src="/static/t.jpg" width="60px" height="10px"><em><b>HalleyComet网址缩短服务</b></em>
             </div>
         <br />
-        <br>
         {% endblock %}
 
         {% block long_url%}
@@ -62,7 +60,7 @@
             <form method="post" class="form-inline" action="/^$">
                 {% csrf_token %}
                 <div class="span2 offset3">
-                    <input class="input-xlarge"  name="short_url" type="text" id="short_url" placeholder="请输入您需要缩短的地址">
+                    <input class="input-xlarge"  name="long_url" type="text" id="short_url" placeholder="请输入您需要缩短的地址">
                 </div>
                 <div class="span2 offset3">
                     <input type="submit" value="缩短" class="btn">
@@ -86,7 +84,7 @@
 
         {% block urls %}
         <div class="row-fluid marketing">
-            <h3>历史记录:</h3> 
+            <h4>历史记录:</h4> 
             {% for data in user_data %}
             <div class="row-fluid">
                 <div class="span8">
