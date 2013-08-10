@@ -57,7 +57,7 @@
 
         {% block long_url%}
         <div class="row-fluid">
-            <form method="post" class="form-inline" action="/^$">
+            <form method="post" class="form-inline">
                 {% csrf_token %}
                 <div class="span2 offset3">
                     <input class="input-xlarge"  name="long_url" type="text" id="short_url" placeholder="请输入您需要缩短的地址">
