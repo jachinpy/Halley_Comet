@@ -1,17 +1,17 @@
 Halley_Comet
 ============
-![](./HalleyComet/bit/static/meinu.jpg)
 你是否还在为一个长网址分享发愁吗？
 ------------------------------
 <p>这是一款使用python语言，基于django框架的网址缩短服务，它能够将一个复杂，冗余的网址，转化为一个小巧玲珑的网址，如果您分享到让您的空间和博客将会让你朋友十分诧异，它更加美观，更加简洁呦~，它还具有历史记录功能，当您以游客身份登录时，显示的始终是最近记录，而当您以会员身份登录时，只会显示与您相关的记录，它还完全屏蔽广告和其他插件的弹出，完全不会影响您的用户体验。</p>
-###网站类型###
-网址缩短服务  
+![](./HalleyComet/bit/static/meinu.jpg)
+###网站类型###  
+  网址缩短服务  
 
-###Braveheart Courage团队制作###
-成员：Ryan，Paul，Cpu，Melon，chin  
+###Braveheart Courage团队制作###  
+  成员：Ryan，Paul，Cpu，Melon，chin  
 
-###运行环境###
-Linux  
+###运行环境###  
+  Linux  
 
 ###工具###
 Python  
