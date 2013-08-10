@@ -25,7 +25,6 @@ class Web_Test(unittest.TestCase):
     def test_login(self):
         self.client.login(username="liu", password="1")
         
-
     def test_regist(self):
         response = self.client.post('/userregist/')
         self.assertEqual(response.status_code, 200)
@@ -64,7 +63,6 @@ class Url_Test(TestCase):
         self.assertEqual(long_to_short(long_url3), "a06194a3")
         self.assertEqual(long_to_short(long_url4), "")
         self.assertEqual(long_to_short(long_url5), "")
-
 
     def test_short_to_long(self):
         short_url = "aaaaaaab"
