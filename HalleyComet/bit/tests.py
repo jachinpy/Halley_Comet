@@ -17,16 +17,17 @@ class Web_Test(unittest.TestCase):
         Url.objects.create(long_url="http://www.google.com", short_url="aaaaaaac")
 
     def test_index(self):
-        response = self.client.get("/")
+        response = self.client.post("/", {"long_url": "http://www.sina.com"})
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(len(response.context['user_data']), 2)
+        self.assertEqual(len(response.context['user_data']), 3)
+        self.assertEqual(len(response.context['short_url']), 8)
 
     def test_login(self):
-        response = self.client.get("/login/")
-        self.assertEqual(response.status_code, 200)
+        self.client.login(username="liu", password="1")
+        
 
     def test_regist(self):
-        response = self.client.get('/userregist/')
+        response = self.client.post('/userregist/')
         self.assertEqual(response.status_code, 200)
     
 class Url_Test(TestCase):            
